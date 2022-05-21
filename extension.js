@@ -1,11 +1,6 @@
-debugger
-
 let i;
 let ingreseNombre;
 let Edad;
-
-
-
 
 
 if(ingreseNombre =="" && Edad <=0)
@@ -20,12 +15,12 @@ if(ingreseNombre =="" && Edad <=0)
     for(i=0;i<2;i++)
     {
     
-        let ingreseNombre = prompt("Ingrese su nombre: ");
-        let Edad = prompt("Ingrese su edad: ");
+         ingreseNombre = prompt("Ingrese su nombre: ");
+         Edad = prompt("Ingrese su edad: ");
     }
 
-    alert("se ha ingresado el nombre",ingreseNombre);
-    alert("Se ha ingresado la edad",Edad);
+    alert("se ha ingresado el nombre" +ingreseNombre );
+    alert("Se ha ingresado la edad" +Edad );
     confirm("Bienvenido!!");
 
 }
