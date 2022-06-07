@@ -4,6 +4,25 @@ let segundoParametro;
 let  primerNota ;
 let  segundaNota ;
 
+
+diasHabilesDeCurso=[{num:1, dia:'Lunes'},
+                    {num:2, dia:'Martes'},
+                    {num:3, dia:'Miercoles'},
+                    {num:4, dia:'Jueves'},
+                    {num:5, dia:'Viernes'},
+                    {num:6, dia:'Sabado'}];
+
+
+alert("Dias habiles del curso");
+diasHabilesDeCurso.map(function(diasHabilesDeCurso)
+{
+
+    alert(diasHabilesDeCurso.num+" = "+diasHabilesDeCurso.dia);
+
+});
+
+
+
 primerNota = parseInt(prompt("ingrese la primer nota: "));
 segundaNota = parseInt(prompt("ingrese la segunda nota: "));
 
@@ -21,6 +40,9 @@ function calcularPromedioAlumno(primerParametro, segundoParametro)
 {
     return (primerParametro + segundoParametro) / 2 ;
 }
+
+
+
 
 /*let i;
 let ingreseNombre;
