@@ -5,7 +5,11 @@ let  primerNota ;
 let  segundaNota ;
 
 
-diasHabilesDeCurso=[{num:1, dia:'Lunes'},
+let titulo = document.getElementById("h_uno");
+alert(titulo.innerHTML);
+
+
+/*const diasHabilesDeCurso=[{num:1, dia:'Lunes'},
                     {num:2, dia:'Martes'},
                     {num:3, dia:'Miercoles'},
                     {num:4, dia:'Jueves'},
@@ -14,12 +18,28 @@ diasHabilesDeCurso=[{num:1, dia:'Lunes'},
 
 
 alert("Dias habiles del curso");
-diasHabilesDeCurso.map(function(diasHabilesDeCurso)
+diasHabilesDeCurso.forEach(function(diasHabilesDeCurso)
 {
 
     alert(diasHabilesDeCurso.num+" = "+diasHabilesDeCurso.dia);
 
-});
+});*/
+
+
+
+function validar()
+{
+
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let edad = document.getElementById("edad").value;
+  
+
+    alert("Nombre: "+ nombre + " \nApellido: "+ apellido + " \nEdad: "+ edad );
+
+
+
+}
 
 
 
@@ -40,8 +60,6 @@ function calcularPromedioAlumno(primerParametro, segundoParametro)
 {
     return (primerParametro + segundoParametro) / 2 ;
 }
-
-
 
 
 /*let i;
