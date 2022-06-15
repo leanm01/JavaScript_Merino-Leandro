@@ -18,6 +18,7 @@
     <script defer src="extension.js"></script>
 
 
+
 </head>
 
 <body>
@@ -26,36 +27,30 @@
     <!-- HEADER -->
     <header class="header_padre_uno">
 
-        <h1 id="h_uno">BIENVENIDOS</h1>
+        <h1 id="h_uno"></h1>
 
     </header>
 
     <!-- MAIN -->
     <main class="main_padre_uno">
 
-        <form id="informacion_estudiante">
+        <div class="primer_div">
 
-            nombre: <input type="text" id="nombre" />
-            <br>apellido: <input type="text" id="apellido" />
-            <br>edad: <input type="number" id="edad" />
+            <h2 class="alumnos_habiles">Alumnos Cargados: </h2>
+            <ul class="primer_ul" id="ListadoDeAlumnos"></ul>
 
-            <br>Tiene futuro esta pagina ? 
-             SI <input type="radio" id="SI" name="futuro" value="SI"/> NO <input type="radio" id="NO" name="futuro" value="NO"/>
-           
-            <br>
-            <br>
+        </div>
+        
+    
+        <div class="segundo_div">
 
-            <br><button type="Mostrar" onclick="validar()"> MOSTRAR </button>
+            <h2 class="alumnos_aprobados">Alumnos aprobados: </h2>
+            <ul class="segundo_ul" id="ListadoDeAlumnosAprobados"></ul>
 
-
-        </form>
+        </div>
 
 
-
-
-
-
-        <h1 id="h_uno_dos">esta pagina esta en proceso!!!</h1>
+        <h1 id="h_uno_dos"></h1>
 
 
     </main>

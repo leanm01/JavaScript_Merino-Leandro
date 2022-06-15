@@ -6,42 +6,66 @@ let  segundaNota ;
 
 
 let titulo = document.getElementById("h_uno");
-alert(titulo.innerHTML);
+titulo.innerText = "BIENVENIDOS";
+
+let texto_uno = document.getElementById("h_uno_dos");
+texto_uno.innerText = "esta pagina esta en proceso!!!";
+
+const alumnos =['Pepe Bolson : 8', 'Tobi Rosales : 4', 'Marco Rosalino : 7', 'Jose Leon : 2', 'Esteban Banquito : 6', 'Martina Roger : 6'];
+const ListadoDeAlumnos = document.getElementById("ListadoDeAlumnos");
 
 
-/*const diasHabilesDeCurso=[{num:1, dia:'Lunes'},
-                    {num:2, dia:'Martes'},
-                    {num:3, dia:'Miercoles'},
-                    {num:4, dia:'Jueves'},
-                    {num:5, dia:'Viernes'},
-                    {num:6, dia:'Sabado'}];
+const ListadoDeAlumnosAprobados = document.querySelector("#ListadoDeAlumnosAprobados");
 
+//ALUMNOS HABILES
 
-alert("Dias habiles del curso");
-diasHabilesDeCurso.forEach(function(diasHabilesDeCurso)
+function alumnosHabiles()
 {
+    ListadoDeAlumnos.innerHTML = "";
+    for(elemento of alumnos)
+    {
+       
+        const listAlum = document.createElement("li");
+        listAlum.id = "1" + elemento;
+        listAlum.innerText = elemento;
+        listAlum.className = "primer_ul .collection-item";
 
-    alert(diasHabilesDeCurso.num+" = "+diasHabilesDeCurso.dia);
+        listAlum.addEventListener("click", ()=>{alumnosaprobados(`${listAlum.id}`)})
 
-});*/
+        ListadoDeAlumnos.append(listAlum);
+       
+
+    }
+
+}
+
+alumnosHabiles();
 
 
-
-function validar()
+function alumnosaprobados(alumn)
 {
+    const elemntoPlus = document.getElementById(alumn);
 
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let edad = document.getElementById("edad").value;
-  
+    if(alumn !="")
+    {
 
-    alert("Nombre: "+ nombre + " \nApellido: "+ apellido + " \nEdad: "+ edad );
+        const alumApr = document.createElement("li");
+        alumApr.className = "collection-item";
+        alumApr.innerText = elemntoPlus.innerText;
+        alumApr.id = `${alumn}aprobado`;
+
+
+        ListadoDeAlumnosAprobados.append(alumApr);
+
+    }
 
 
 
 }
 
 
+
+// CARGA DE NOTAS
 
 primerNota = parseInt(prompt("ingrese la primer nota: "));
 segundaNota = parseInt(prompt("ingrese la segunda nota: "));
@@ -62,30 +86,21 @@ function calcularPromedioAlumno(primerParametro, segundoParametro)
 }
 
 
-/*let i;
-let ingreseNombre;
-let Edad;
+//ARRAY
+
+/*
+const alumnosCargados=[{id:1, alumno:'Pepe Bolson'},
+                       {id:2, alumno:'Tobi Rosales'},
+                       {id:3, alumno:'Marco Rosalino'},
+                       {id:4, alumno:'Jose Leon'},
+                       {id:5, alumno:'Esteban Banquito'},
+                       {id:6, alumno:'Martina Roger'}];
 
 
-if(ingreseNombre =="" && Edad <=0)
+alert("Alumnos ya cargados");
+alumnosCargados.forEach(function(alumnosCargados)
 {
-    
-    alert("No se ha ingresado el nombre",ingreseNombre);
-    alert("No Se ha ingresado la edad",Edad);
 
-}else
-{
+    alert(alumnosCargados.id+" = "+alumnosCargados.alumno);
 
-    for(i=0;i<2;i++)
-    {
-    
-         ingreseNombre = prompt("Ingrese su nombre: ");
-         Edad = prompt("Ingrese su edad: ");
-    }
-
-    alert("se ha ingresado el nombre" +ingreseNombre );
-    alert("Se ha ingresado la edad" +Edad );
-    confirm("Bienvenido!!");
-
-}*/
-
+});*/
