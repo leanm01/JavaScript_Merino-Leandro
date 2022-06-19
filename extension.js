@@ -6,7 +6,7 @@ let  segundaNota ;
 
 
 let titulo = document.getElementById("h_uno");
-titulo.innerText = "BIENVENIDOS";
+titulo.innerText = "Bienvenidos";
 
 let texto_uno = document.getElementById("h_uno_dos");
 texto_uno.innerText = "esta pagina esta en proceso!!!";
