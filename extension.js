@@ -67,6 +67,8 @@ function alumnosaprobados(alumn)
 
 // CARGA DE NOTAS
 
+/*
+
 primerNota = parseInt(prompt("ingrese la primer nota: "));
 segundaNota = parseInt(prompt("ingrese la segunda nota: "));
 
@@ -84,6 +86,8 @@ function calcularPromedioAlumno(primerParametro, segundoParametro)
 {
     return (primerParametro + segundoParametro) / 2 ;
 }
+
+*/
 
 
 //ARRAY
