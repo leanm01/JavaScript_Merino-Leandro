@@ -1,21 +1,98 @@
-let promedio=0;
+const usuariosArray = [];
+
+function AgregarUsuario()
+{
+    let dni = parseInt(document.getElementById("inputDNI").value);
+    let telefono = parseInt(document.getElementById("inputTelefono").value);
+    let nombre = document.getElementById("inputNombre").value;
+    let email = document.getElementById("inputEmail").value;
+
+    let newUser =  new Usuario(nombre,email,dni,telefono);
+    usuariosArray.push(newUser) ;
+
+    console.log(newUser);
+    MostrarUsuario();
+} 
+
+function MostrarUsuario()
+{
+    let string = "";
+    for (let index = 0; index < usuariosArray.length; index++) {
+        string = string   +"Nombre:"+ usuariosArray[index].nombre +" - email:"+ usuariosArray[index].email +" - dni:"+ usuariosArray[index].dni +" - telefono:" +usuariosArray[index].telefono +"  <br>  ";
+        
+    }
+
+    document.getElementById("alumnosCargados").innerHTML = string;
+}
+
+
+
+
+function datosDeAlumno() 
+{
+     const datosAlumno = {nombre: inputNombre.value,
+                          telefono: inputTelefono.value,
+                          email: inputEmail.value,
+                          DNI: inputDNI.value} 
+    
+    let str = JSON.stringify(datosAlumno)
+    
+    localStorage.setItem("datosAlumno", str)
+}
+
+function obtenerDatosAlumnos() 
+{
+    
+    if (localStorage.getItem("datosAlumno1")) {
+        const datosAlumno1 = JSON.parse(localStorage.getItem("datosAlumno1"))
+                inputNombre.value = datosAlumno1.nombre
+                inputTelefono.value = datosAlumno1.telefono
+                inputEmail.value  = datosAlumno1.email
+                inputDNI.value = datosAlumno1.DNI
+    }    
+    
+}
+
+obtenerDatosAlumnos(); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*let promedio=0;
 let primerParametro;
 let segundoParametro;
 let  primerNota ;
 let  segundaNota ;
+*/
+/*
 
 
-let titulo = document.getElementById("h_uno");
-titulo.innerText = "Bienvenidos";
 
-let texto_uno = document.getElementById("h_uno_dos");
-texto_uno.innerText = "esta pagina esta en proceso!!!";
-
-const alumnos =['Pepe Bolson : 8', 'Tobi Rosales : 4', 'Marco Rosalino : 7', 'Jose Leon : 2', 'Esteban Banquito : 6', 'Martina Roger : 6'];
-const ListadoDeAlumnos = document.getElementById("ListadoDeAlumnos");
-
-
-const ListadoDeAlumnosAprobados = document.querySelector("#ListadoDeAlumnosAprobados");
+//const ListadoDeAlumnosAprobados = document.querySelector("#ListadoDeAlumnosAprobados");
 
 //ALUMNOS HABILES
 
@@ -36,7 +113,7 @@ function alumnosHabiles()
        
 
     }
-
+    console.log(ListadoDeAlumnos);
 }
 
 alumnosHabiles();
@@ -62,7 +139,7 @@ function alumnosaprobados(alumn)
 
 
 }
-
+*/
 
 
 // CARGA DE NOTAS

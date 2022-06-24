@@ -1,7 +1,9 @@
 body{
 
-    background-color: rgb(255, 255, 255);
-
+    background-image: url(assets/Images/bf46a82c-3b9b-4f44-a1e6-70450dbd16d3_1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 div, form {
@@ -34,15 +36,106 @@ p, li {
     background-color: aliceblue;
 }
 
-.carrito {
-    border-color: whitesmoke;
-    padding: 5px;
-}
-
-.italica-carrito {
-    font-style: italic;
-}
-
 .fondo-inputs {
     background-color: aquamarine !important;
+}
+
+.alumnos_ya_cargados
+{
+
+    padding-left: 90px;
+
+}
+
+.vista_de_alumnos
+{
+    padding-left: 90px;
+    border: 2px solid black;
+}
+
+footer {
+    background-color: #353b48;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "footer";
+    gap: 1rem;
+    padding: 50px 0px;
+    background-size: cover;
+}
+
+.container-footer{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 2rem;
+    
+}
+
+.box-footer{
+
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+}
+
+.box-footer h2{
+
+    margin-bottom: 30px;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.box-footer a{
+
+    margin-top: 10px;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.box-footer a:hover{
+
+    font-size: 0.8;
+
+}
+
+.box-copyright{
+
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box-copyright p{
+
+    margin-top: 20px;
+    color: antiquewhite;
+    
+}
+
+.box-copyright hr{
+
+    border: none;
+    height: 1px;
+
+}
+
+.imgIg {
+    height: 30px;
+    width: 40px;
+}
+
+.imgTw {
+    height: 30px;
+    width: 30px;
+}
+
+.imgGm {
+    height: 30px;
+    width: 30px;
 }

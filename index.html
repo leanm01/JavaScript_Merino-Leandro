@@ -1,80 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>TEST JS</title>
     
-    <title>TEST JS</title>
-
-    <!--google fonts -->
+        <!--google fonts -->
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> 
+        
+        <!-- link JS-->
+        
+        <script defer src="usuario.js"></script>
+        <script defer src="extension.js"></script>
+        
+       <!-- link CSS-->
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet"> 
-    
-    <!-- link JS-->
-
-    <script defer src="extension.js"></script>
-    <script defer src="usuario.js"></script>
-
-    <!-- link CSS-->
-
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-    
-    
-
-
-    <!-- HEADER -->
-    <header class="header_padre_uno">
-
-        <h1 id="h_uno"></h1>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
         
+        <form action="#" class="color-formulario z-depth-2">
+            <p>Ingrese sus datos:</p> 
+            <input type="text" id="inputNombre" placeholder="Ingrese su nombre">
+            <input type="number" id="inputTelefono" placeholder="Su teléfono móvil">
+            <input type="email" id="inputEmail" placeholder="Correo electrónico">
+            <input type="number" id="inputDNI" placeholder="Numero de documento">
+            <br>
+            <br>
+            <p id="datos del alumno"></p>
+            <input type="submit" onclick="AgregarUsuario()" class="btn orange white-text" id="submit" value="ENVIAR">
+        </form>
 
-    </header>
+        <p class="alumnos_ya_cargados">Alumnos ingresados:</p> 
 
-    <!-- MAIN -->
-    <main class="main_padre_uno">
+        <p class="vista_de_alumnos" id="alumnosCargados"></p>
 
-        <div class="primer_div">
 
-            <h2 class="alumnos_habiles">Alumnos Cargados: </h2>
-            <ul class="primer_ul" id="ListadoDeAlumnos"></ul>
 
-        </div>
-        
+        <footer class="footer_principal">
+
+            <div class="container-footer">
     
-        <div class="segundo_div">
-
-            <h2 class="alumnos_aprobados">Alumnos aprobados: </h2>
-            <ul class="segundo_ul" id="ListadoDeAlumnosAprobados"></ul>
-
+            <div class="box-footer">
+                
+                <h2>ayuda</h2>
+                 
+                 <a href="#">Posgrado</a>
+                 <a href="#">Tecnicaturas</a>
+                 <a href="#">Grado</a>
+            
+            </div>
+    
+            <div class="box-footer">
+                
+                <h2>mas ayuda</h2>
+                 
+                 <a href="#">Requisitos</a>
+                 <a href="#">Links de Interés</a>
+                 <a href="#">Docentes</a>
+            
+            </div>
+    
+            <div class="box-footer">
+                    
+                <h2>seguinos</h2>
+                
+                <a href="#"><img class="imgIg" src="assets\Images\logo-minimalist-instagram.png">instagram</a>
+                <a href="#"><img class="imgTw" src="assets\Images\twitter-logo-6.png">twitter</a>
+                <a href="#"><img class="imgGm" src="assets\Images\png-transparent-triangle-text-brand-communication-gmail-gmail-logo-angle-text-rectangle.png">gmail</a>
+                
+                
+            </div>
+            
         </div>
+    
+        <div class="box-copyright">
+            <hr>
+            <p>desarrollado por Merino Leandro ®2022</p>
+        </div>
+    
+    
+        </footer>
+    
 
 
-        <h1 id="h_uno_dos"></h1>
-
-
-    </main>
-
-
-    <li class="nav-item"><a class="nav-link" href="ingresoAlumn.html">Usuario</a></li>
-
-    <!-- FOOTER -->
-    <footer class="footer_principal">
-
-
-
-    </footer>
-
-
-</body>
-
+    </body>
 </html>
-
-
