@@ -10,7 +10,10 @@ function AgregarUsuario()
     let newUser =  new Usuario(nombre,email,dni,telefono);
     usuariosArray.push(newUser) ;
 
+    localStorage.setItem("Usuarios", JSON.stringify(usuariosArray));
+
     console.log(newUser);
+    alertify.success('Usuario Agregado');
     MostrarUsuario();
 } 
 
@@ -28,16 +31,41 @@ function MostrarUsuario()
 
 
 
+function CargarLocalStorage()
+{
+
+    const arrayTest = JSON.parse(localStorage.getItem("Usuarios"));
+    for (let index = 0; index < arrayTest.length; index++) {
+        usuariosArray.push(new Usuario(arrayTest[index].telefono, arrayTest[index].nombre, arrayTest[index].email, arrayTest[index].dni));
+    }
+
+    MostrarUsuario()
+}
+
+
+const buttonAgregar = document.getElementById("CargarLocalStorage");
+buttonAgregar.addEventListener("click", function() {
+    CargarLocalStorage();
+});
+
+const buttonCargarLs = document.getElementById("AgregarUsuario");
+buttonCargarLs.addEventListener("click", function() {
+    AgregarUsuario();
+});
+
+
+
+/*
 function datosDeAlumno() 
 {
      const datosAlumno = {nombre: inputNombre.value,
                           telefono: inputTelefono.value,
                           email: inputEmail.value,
-                          DNI: inputDNI.value} 
+                          DNI: inputDNI.value};
     
-    let str = JSON.stringify(datosAlumno)
+    let str = JSON.stringify(datosAlumno);
     
-    localStorage.setItem("datosAlumno", str)
+    localStorage.setItem("datosAlumno", str);
 }
 
 function obtenerDatosAlumnos() 
@@ -55,7 +83,7 @@ function obtenerDatosAlumnos()
 
 obtenerDatosAlumnos(); 
 
-
+*/
 
 
 
