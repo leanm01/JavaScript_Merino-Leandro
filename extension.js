@@ -19,17 +19,22 @@ function AgregarUsuario()
     alertify.success('Usuario Agregado');
     MostrarUsuario();
     
+    let mostrarSiHayUS = newUser==1 ? 'No hay usuarios' :  'Se cargo el usuario'
+    
+    console.log(mostrarSiHayUS);
+
+    /*
     if(newUser!=0 || newUser==1)
-{
+    {
 
-    console.log("Se agrego un usuario");
+         console.log("Se agrego un usuario");
 
-}
-else{
+    }
+    else{
 
-    console.log("NO se agrego un usuario");
+         console.log("NO se agrego un usuario");
 
-}
+    }*/
 
 } 
 
