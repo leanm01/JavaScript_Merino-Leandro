@@ -2,10 +2,12 @@ const usuariosArray = [];
 
 function AgregarUsuario()
 {
+
     let dni = parseInt(document.getElementById("inputDNI").value);
     let telefono = parseInt(document.getElementById("inputTelefono").value);
     let nombre = document.getElementById("inputNombre").value;
     let email = document.getElementById("inputEmail").value;
+
 
     let newUser =  new Usuario(nombre,email,dni,telefono);
     usuariosArray.push(newUser) ;
@@ -13,9 +15,26 @@ function AgregarUsuario()
     localStorage.setItem("Usuarios", JSON.stringify(usuariosArray));
 
     console.log(newUser);
+    
     alertify.success('Usuario Agregado');
     MostrarUsuario();
+    
+    if(newUser!=0 || newUser==1)
+{
+
+    console.log("Se agrego un usuario");
+
+}
+else{
+
+    console.log("NO se agrego un usuario");
+
+}
+
 } 
+
+
+
 
 function MostrarUsuario()
 {
@@ -27,9 +46,6 @@ function MostrarUsuario()
 
     document.getElementById("alumnosCargados").innerHTML = string;
 }
-
-
-
 
 function CargarLocalStorage()
 {
@@ -52,6 +68,8 @@ const buttonCargarLs = document.getElementById("AgregarUsuario");
 buttonCargarLs.addEventListener("click", function() {
     AgregarUsuario();
 });
+
+const usuarioDos= {...usuariosArray};
 
 
 
