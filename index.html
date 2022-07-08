@@ -39,13 +39,35 @@
             <br>
             <p id="datos del alumno"></p>
             <input type="submit"  class="btn orange white-text" id="AgregarUsuario" value="ENVIAR">
-            <input type="submit"  class="btn orange white-text" id="CargarLocalStorage" value="Cargar Local Storage">
+            <input type="submit"  class="btn orange white-text" id="CargarLocalStorage" value="CARGAR">
+    
         </form>
 
         <p class="alumnos_ya_cargados">Alumnos ingresados:</p> 
 
         <p class="vista_de_alumnos" id="alumnosCargados"></p>
 
+
+        <!-- EMAILJS-->
+        <form id="form">
+            <div class="field">
+              <label for="Lean">D.N.I</label>
+              <input type="text" name="Lean" id="Lean">
+            </div>
+            <div class="field">
+              <label for="reply_to">COMENTARIOS</label>
+              <input type="text" name="reply_to" id="reply_to">
+            </div>
+          
+            <input class="btton_mail" type="submit" id="button" value="Enviar Email" >
+          </form>
+          
+          <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+          
+          <script type="text/javascript">
+            emailjs.init('FeY9ybhw4hzeCZfpP')
+          </script>
 
 
         <footer class="footer_principal">

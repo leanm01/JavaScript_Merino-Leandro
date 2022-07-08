@@ -59,7 +59,7 @@ function CargarLocalStorage()
     for (let index = 0; index < arrayTest.length; index++) {
         usuariosArray.push(new Usuario(arrayTest[index].telefono, arrayTest[index].nombre, arrayTest[index].email, arrayTest[index].dni));
     }
-
+    alertify.success('Se cargo el usuario');
     MostrarUsuario()
 }
 
@@ -74,8 +74,54 @@ buttonCargarLs.addEventListener("click", function() {
     AgregarUsuario();
 });
 
+
 const usuarioDos= {...usuariosArray};
 
+/*
+function mailEnviado()
+{
+
+
+    let usuarioAux = usuariosArray.getIndex(parseInt(document.getElementById("inputDNI").value));
+
+    if(usuarioAux>=0)
+    {
+
+        emailjs.send("service_Leandro","template_om2ryyf",{
+            Lean: "hola",
+            reply_to: "recibio informacion",
+            });
+
+
+    }
+
+
+
+
+}
+*/
+
+//EMAILJS
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_om2ryyf';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar Email';
+      alert('Enviado!');
+    }, (err) => {
+      btn.value = 'Enviar Email';
+      alert(JSON.stringify(err));
+    });
+});
 
 
 /*
